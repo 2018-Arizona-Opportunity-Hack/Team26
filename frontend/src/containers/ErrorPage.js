@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.scss';
 
-class SubscribePage extends Component {
+class ErrorPage extends Component {
   render() {
     return (
-      <div className="SubscribeContainer">
+      <div className="ErrorContainer">
       </div>
     );
   }
 }
 
-export default SubscribePage;
+export default ErrorPage;
