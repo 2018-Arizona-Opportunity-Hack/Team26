@@ -21,7 +21,7 @@ class SubscribePage extends Component {
     const input = event.target.value;
     this.setState({user_name: input});
   }
-  
+
 
   handleSubmit(event) {
     alert('user name is: ' + this.state.user_name + 'user_email is: ' + this.state.user_email+ 'user_phone is: ' + this.state.user_phone);
@@ -37,7 +37,7 @@ class SubscribePage extends Component {
           <FormGroup row>
             <Label for="subscribeName" sm={1}>Name</Label>
             <Col sm={11}>
-              <Input type="text" name="name" id="subscribeName" placeholder="Name" name="name" value={this.state.value} onChange={this.handleChange} />
+              <Input type="text" name="name" id="subscribeName" placeholder="Name" value={this.state.value} onChange={this.handleChange} />
             </Col>
           </FormGroup>
           <FormGroup row>

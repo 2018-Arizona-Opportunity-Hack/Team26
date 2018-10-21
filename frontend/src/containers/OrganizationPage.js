@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import BigCalendar from 'react-big-calendar'
-import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 import axios from 'axios';
 import { CSVLink } from "react-csv";
 
@@ -9,7 +9,7 @@ import moment from 'moment'
 
 import './OrganizationPage.scss';
 
-const localizer = BigCalendar.momentLocalizer(moment) 
+const localizer = BigCalendar.momentLocalizer(moment)
 
 const csvData = [
   ["firstname", "lastname", "email"],
@@ -21,7 +21,7 @@ const csvData = [
 class OrganizationPage extends Component {
   constructor(props) {
     super(props)
-    this.state = { 
+    this.state = {
       user: {},
       user_name: "",
       user_email: "",
@@ -114,7 +114,7 @@ class OrganizationPage extends Component {
           <p>{this.state.user_name}, {this.state.user_phone}, {this.state.user_email}</p>
         </div>)}
         <CSVLink data={csvData}>Download All Users To CSV</CSVLink>
- 
+
       <div className="Availablity">
         <h2>Available Volunteers</h2>
         <BarChart width={800} height={300} data={data}
@@ -143,12 +143,12 @@ class OrganizationPage extends Component {
                 <Col sm={3}>
                   <Input type="date" name="date" id="eventDate" placeholder="Date" onChange={this.handleDateChange} />
                 </Col>
-                
+
                 <Label for="eventStartTime" sm={1}>Start</Label>
                 <Col sm={3}>
                   <Input type="time" name="startTime" id="eventStartTime" placeholder="Start Time" value={this.state.event_start_time} onChange={this.handleStartTimeChange} />
                 </Col>
-                
+
                 <Label for="eventEndTime" sm={1}>End</Label>
                 <Col sm={3}>
                   <Input type="time" name="endTime" id="eventEndTime" placeholder="End Time" value={this.state.event_end_time} onChange={this.handleEndTimeChange} />
