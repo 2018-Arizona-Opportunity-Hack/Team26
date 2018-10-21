@@ -1,0 +1,23 @@
+{
+  "name": "team26",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./main/main.js",
+  "dependencies": {
+    "pg": "^7.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2018-Arizona-Opportunity-Hack/Team26.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2018-Arizona-Opportunity-Hack/Team26/issues"
+  },
+  "homepage": "https://github.com/2018-Arizona-Opportunity-Hack/Team26#readme"
+}
