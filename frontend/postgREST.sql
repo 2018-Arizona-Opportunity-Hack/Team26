@@ -47,3 +47,12 @@ insert into api.attendance (user_name, total_hours) values ('Volunteer 2', 10);
 insert into api.attendance (user_name, total_hours) values ('Volunteer 3', 6);
 insert into api.attendance (user_name, total_hours) values ('Volunteer 4', 6);
 insert into api.attendance (user_name, total_hours) values ('Volunteer 5', 1);
+
+create table api.attendance (
+  event_name text,
+  start_time text,
+  end_time text
+);
+
+insert into api.attendance (user_name, total_hours) values ('Volunteer 1', 4);
+
