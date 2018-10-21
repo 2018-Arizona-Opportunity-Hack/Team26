@@ -8,5 +8,8 @@
     "start": "node dbService.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^7.5.0"
+  }
 }
