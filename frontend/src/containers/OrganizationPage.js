@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Col, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import BigCalendar from 'react-big-calendar'
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 import moment from 'moment'
 
 import './OrganizationPage.scss';
@@ -82,6 +83,15 @@ class OrganizationPage extends Component {
   // }
 
   render() {
+    const data = [
+      {name: 'Monday', day: 2},
+      {name: 'Tuesday', day: 3},
+      {name: 'Wednesday', day: 4},
+      {name: 'Thursday', day: 2},
+      {name: 'Friday', day: 5},
+      {name: 'Saturday', day: 4},
+      {name: 'Sunday', day: 7},
+    ];
 
     return (
       <div className="OrganizationPage">
@@ -89,9 +99,22 @@ class OrganizationPage extends Component {
           <h1>Recently Signed Up</h1>
           <p>{this.state.user_name}, {this.state.user_phone}, {this.state.user_email}</p>
         </div>)}
+ 
+      <div className="Availablity">
+        <h2>Available Volunteers</h2>
+        <BarChart width={800} height={300} data={data}
+          margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+          <CartesianGrid strokeDasharray="3 3"/>
+          <XAxis dataKey="name"/>
+          <YAxis/>
+          <Tooltip/>
+          <Bar dataKey="day" fill="#8884d8" />
+        </BarChart>
+      </div>
 
         <div className="Calendar">
           <div className="AddEvent">
+            <h2>Add Event</h2>
             <Form onSubmit={this.addEventHandler}>
               <FormGroup row>
                 <Label for="eventName" sm={1}>Name</Label>
@@ -115,7 +138,7 @@ class OrganizationPage extends Component {
                   <Input type="time" name="endTime" id="eventEndTime" placeholder="End Time" value={this.state.event_end_time} onChange={this.handleEndTimeChange} />
                 </Col>
               </FormGroup>
-              <input type="submit" value="Create Event" />
+              <Button type="submit" color="primary" >Sign Up</Button>
             </Form>
           </div>
           <BigCalendar
