@@ -12,7 +12,7 @@
     "start": "npm run frontend",
     "frontend_db": "npm run db && npm run frontend",
     "db": "cd ./db && npm run start",
-    "frontend": "cd ./frontend && sudo npm run start",
+    "frontend": "cd ./frontend && npm run start",
     "npmInstall": "npm install"
   },
   "repository": {
