@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import BigCalendar from 'react-big-calendar';
 import axios from 'axios';
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 
 import moment from 'moment'
 
