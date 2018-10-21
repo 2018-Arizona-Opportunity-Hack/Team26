@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import { Col, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
-// import './App.scss';
+import './SubscribePage.scss';
 
 class SubscribePage extends Component {
   render() {
 
     return (
-      <div className="SubscribeContainer">
+      <div className="SubscribePage">
+      <div className="instructions">Please input the following information to sign up!</div>
+      <br></br>
         <Form onSubmit={this.handleSubmit}>
           <FormGroup row>
             <Label for="subscribeName" sm={1}>Name</Label>
@@ -28,6 +31,10 @@ class SubscribePage extends Component {
             </Col>
           </FormGroup>
         </Form>
+
+        <Link to='/verify'>
+            <Button color="primary">Sign Up</Button>
+          </Link>
       </div>
     );
   }

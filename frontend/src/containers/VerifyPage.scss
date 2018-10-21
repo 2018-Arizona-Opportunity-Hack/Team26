@@ -1,0 +1,28 @@
+.VerifyPage{
+    text-align: center;
+
+    .background-image{
+        background-image: url("https://source.unsplash.com/ihFWKicceNk/2000x900");
+        background-repeat: no-repeat;
+        min-height: 900px;
+        overflow: hidden;
+    }
+
+    @media only screen and (max-width: 900px) {
+        .display-3 {
+            .logo{
+                width: 80%;
+            }
+        }
+
+        .background-image{            
+            display: none;
+        }
+    }
+
+    .jumbotron {
+        margin-bottom: 0;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}

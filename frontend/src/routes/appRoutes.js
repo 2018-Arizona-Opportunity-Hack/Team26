@@ -6,6 +6,7 @@ import SubscribePage from '../containers/SubscribePage'
 import OrganizationPage from '../containers/OrganizationPage'
 import CheckinPage from '../containers/CheckinPage'
 import ErrorPage from '../containers/ErrorPage'
+import VerifyPage from '../containers/VerifyPage'
 
 class AppRoutes extends Component {
   render() {
@@ -13,6 +14,7 @@ class AppRoutes extends Component {
         <Switch>
           <Route exact path={'/'} component={HomePage}/>
           <Route path={'/subscribe'} component={SubscribePage}/>
+          <Route path={'/verify'} component={VerifyPage}/>
           <Route path={'/organization'} component={OrganizationPage}/>
           <Route path={'/checkin'} component={CheckinPage}/>
           <Route path={'*'} conponent={ErrorPage}/>
