@@ -1,3 +1,9 @@
+Stock Photos from:
+https://unsplash.com/photos/lbLgFFlADrY
+https://unsplash.com/photos/ihFWKicceNk
+https://unsplash.com/photos/oqStl2L5oxI
+https://www.iconfinder.com/icons/2400509/emoji_emot_emotion_good_great_happy_laugh_icon
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
