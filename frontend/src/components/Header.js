@@ -7,33 +7,36 @@ export default class Header extends Component {
   constructor(props) {
     super(props);
 
-    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.toggle = this.toggle.bind(this);
     this.state = {
-      collapsed: true
+      isOpen: false
     };
   }
 
-  toggleNavbar() {
+  toggle() {
     this.setState({
-      collapsed: !this.state.collapsed
+      isOpen: !this.state.isOpen
     });
   }
 
   render() {
     return (
       <div className="Header">
-        <Navbar color="faded" light>
-          <NavbarBrand href="/" className="mr-auto">Volunteering Portal</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-          <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav navbar>
+            <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">Volunteering Portal</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">TODO</NavLink>
+                <NavLink href="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">TODO</NavLink>
+                <NavLink href="/organization">Admin</NavLink>
               </NavItem>
-            </Nav>
+              <NavItem>
+                <NavLink href="/checkin">Volunteering Sign In Page</NavLink>
+              </NavItem>
+              </Nav>
           </Collapse>
         </Navbar>
       </div>
