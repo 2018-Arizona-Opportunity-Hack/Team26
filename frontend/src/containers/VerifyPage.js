@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import { Jumbotron, Button } from 'reactstrap';
 import { Link } from 'react-router-dom'
 import logo_image from './swift-logo.png';
-import './HomePage.scss';
+import './VerifyPage.scss';
 
-class HomePage extends Component {
+class VerifyPage extends Component {
   render() {
     return (
-      <div className="HomePage">
+      <div className="VerifyPage">
       <Jumbotron>
           <h1 className="display-3"><img className="logo" alt="Logo" src={logo_image}/></h1>
-          <p className="lead">Welcome to our volunteer communication portal. Please Register to volunteer for the Swift Youth Foundation.</p>
+          <p className="lead">Congratulations! You are registered.</p>
           <p className="lead">
-          <Link to='/subscribe'>
-            <Button color="primary">Volunteer</Button>
+          <Link to='/'>
+            <Button color="primary">Home</Button>
           </Link>
           </p>
       </Jumbotron>
@@ -23,4 +23,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default VerifyPage;
