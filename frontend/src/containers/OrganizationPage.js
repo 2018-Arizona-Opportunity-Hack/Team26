@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-// import './App.scss';
+import './OrganizationPage.scss';
 
 class OrganizationPage extends Component {
   render() {
     return (
-      <div className="OrganizationContainer">
+      <div className="OrganizationPage">
       </div>
     );
   }
