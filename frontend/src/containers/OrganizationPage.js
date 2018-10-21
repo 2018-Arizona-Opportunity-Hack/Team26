@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import { Col, Form, FormGroup, Label, Input } from 'reactstrap';
-import BigCalendar from 'react-big-calendar'
+import BigCalendar from 'react-big-calendar';
+import axios from 'axios';
+import { CSVLink, CSVDownload } from "react-csv";
+
 import moment from 'moment'
 
 import './OrganizationPage.scss';
 
 const localizer = BigCalendar.momentLocalizer(moment) 
+
+const csvData = [
+  ["firstname", "lastname", "email"],
+  ["Ahmed", "Tomi", "ah@smthing.co.com"],
+  ["Raed", "Labes", "rl@smthing.co.com"],
+  ["Yezzi", "Min l3b", "ymin@cocococo.com"]
+];
 
 class OrganizationPage extends Component {
   constructor(props) {
@@ -75,20 +85,29 @@ class OrganizationPage extends Component {
   }
 
   // async componentDidMount(){
-  //   let response = await axios.get('http://localhost:3000/users');
+  //   let response = await axios.get('http://localhost:3000/uav');
   //   console.log(response);
   //   let a = response.data;
-  //   this.setState({user: response.data, user_name: a[a.length-1].user_name, user_email: a[a.length-1].user_email, user_phone: a[a.length-1].user_phone});
+  //   // this.setState({});
   // }
+
+  async componentDidMount(){
+    let response = await axios.get('http://localhost:3000/users');
+    console.log(response);
+    let a = response.data;
+    this.setState({user: response.data, user_name: a[a.length-1].user_name, user_email: a[a.length-1].user_email, user_phone: a[a.length-1].user_phone});
+  }
 
   render() {
 
     return (
       <div className="OrganizationPage">
         {this.state.user_name.length > 0 && (<div className="RecentUser">
-          <h1>Recently Signed Up</h1>
+          <h1>Recently Signed Up:</h1>
           <p>{this.state.user_name}, {this.state.user_phone}, {this.state.user_email}</p>
         </div>)}
+        <CSVLink data={csvData}>Download All Users To CSV</CSVLink>
+
 
         <div className="Calendar">
           <div className="AddEvent">
