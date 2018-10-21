@@ -28,10 +28,13 @@ export default class Header extends Component {
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="#">TODO</NavLink>
+                <NavLink href="#">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">TODO</NavLink>
+                <NavLink href="/organization">Admin</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/checkin">Volunteering Sign In Page</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

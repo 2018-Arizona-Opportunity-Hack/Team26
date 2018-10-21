@@ -7,6 +7,7 @@ import OrganizationPage from '../containers/OrganizationPage'
 import CheckinPage from '../containers/CheckinPage'
 import ErrorPage from '../containers/ErrorPage'
 import VerifyPage from '../containers/VerifyPage'
+import VerifyPageSignIn from '../containers/VerifyPageSignIn'
 
 class AppRoutes extends Component {
   render() {
@@ -17,7 +18,8 @@ class AppRoutes extends Component {
           <Route path={'/verify'} component={VerifyPage}/>
           <Route path={'/organization'} component={OrganizationPage}/>
           <Route path={'/checkin'} component={CheckinPage}/>
-          <Route path={'*'} conponent={ErrorPage}/>
+          <Route path={'/verifysignin'} component={VerifyPageSignIn}/>
+          <Route path={'*'} component={ErrorPage}/>
         </Switch>
     );
   }
