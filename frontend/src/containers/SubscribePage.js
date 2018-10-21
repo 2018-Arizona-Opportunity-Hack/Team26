@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import './SubscribePage.scss';
 
@@ -52,6 +52,15 @@ class SubscribePage extends Component {
               <Input type="email" name="email" id="subscribeEmail" placeholder="Email" />
             </Col>
           </FormGroup>
+          <div className="availability">
+          <p>Please Enter Hours of Availability</p>
+            <p>Monday<Input type="text" name="mon_s" id="mon_s" placeholder="Start Time" /><Input type="text" name="mon_e" id="mon_e" placeholder="End Time" /></p>
+            <p>Tuesday<Input type="text" name="tue_S" id="tue_S" placeholder="Start Time" /><Input type="text" name="tue_e" id="tue_e" placeholder="End Time" /></p>
+            <p>Wednesday<Input type="text" name="wed_s" id="wed_s" placeholder="Start Time" /><Input type="text" name="wed_e" id="wed_e" placeholder="End Time" /></p>
+            <p>Thursday<Input type="text" name="thur_s" id="thur_s" placeholder="Start Time" /><Input type="text" name="thur_e" id="thur_e" placeholder="End Time" /></p>
+            <p>Friday<Input type="text" name="fri_s" id="fri_s" placeholder="Start Time" /><Input type="text" name="fri_e" id="fri_e" placeholder="End Time" /></p>
+            <p>Saturday<Input type="text" name="sat_s" id="sat_s" placeholder="Start Time" /><Input type="text" name="sat_e" id="sat_e" placeholder="End Time" /></p>
+          </div>
           <input type="submit" value="Sign Up Test" />
         </Form>
         <Link to='/verify'>

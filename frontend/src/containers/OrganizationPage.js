@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './OrganizationPage.scss';
+import BarChart from './BarChart';
 
 class OrganizationPage extends Component {
   constructor(props) {
