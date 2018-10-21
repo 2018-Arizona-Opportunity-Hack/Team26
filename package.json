@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run db",
+    "start": "cd && npm run db",
     "frontend_db": "npm run db && npm run frontend",
     "db": "cd ./db && npm run start",
     "frontend": "cd ./frontend npm run start"

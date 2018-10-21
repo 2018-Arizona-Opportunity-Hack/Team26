@@ -2,12 +2,6 @@
 To bring together and run application.
 */
 console.log("running?");
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true
-});
-console.log(process.env.DATABASE_URL);
 console.log("still running?");
 
 /*
