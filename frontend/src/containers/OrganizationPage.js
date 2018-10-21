@@ -157,8 +157,8 @@ class OrganizationPage extends Component {
                   <Input type="time" name="endTime" id="eventEndTime" placeholder="End Time" value={this.state.event_end_time} onChange={this.handleEndTimeChange} />
                 </Col>
               </FormGroup>
-              <Button type="submit" color="primary" >Sign Up</Button>
-            </Form>
+              <input type="submit" value="Create Event" />
+                          </Form>
           </div>
           <BigCalendar
             localizer={localizer}
