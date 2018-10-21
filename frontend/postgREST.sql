@@ -36,3 +36,33 @@ insert into api.users (user_id, user_name, user_phone, user_email) values (1, 'V
 -- returns all results as json, can filter
 
 -- Can also insert by posting a json object to the same url
+
+create table api.attendance (
+  user_name text,
+  total_hours int,
+);
+
+insert into api.attendance (user_name, total_hours) values ('Volunteer 1', 4);
+insert into api.attendance (user_name, total_hours) values ('Volunteer 2', 10);
+insert into api.attendance (user_name, total_hours) values ('Volunteer 3', 6);
+insert into api.attendance (user_name, total_hours) values ('Volunteer 4', 6);
+insert into api.attendance (user_name, total_hours) values ('Volunteer 5', 1);
+
+create table api.attendance (
+  event_name text,
+  start_time text,
+  end_time text
+);
+
+insert into api.attendance (user_name, total_hours) values ('Volunteer 1', 4);
+
+create table api.uav (
+  user_name text,
+  available text
+);
+
+insert into api.uav (user_name, available) values ('Sally', 'Monday, Friday');
+insert into api.uav (user_name, available) values ('John', 'Tuesday, Friday');
+insert into api.uav (user_name, available) values ('Baxter', 'Saturday, Friday');
+insert into api.uav (user_name, available) values ('Joe', 'Saturday, Friday');
+insert into api.uav (user_name, available) values ('Suzy', 'Monday, Thursday, Friday');
