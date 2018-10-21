@@ -9,7 +9,10 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node ./main/main.js"
+    "start": "npm run frontend",
+    "frontend_db": "npm run db && npm run frontend",
+    "db": "cd ./db && npm install && npm run start",
+    "frontend": "cd ./frontend && npm install && npm run start"
   },
   "repository": {
     "type": "git",
