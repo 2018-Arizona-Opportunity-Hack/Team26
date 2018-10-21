@@ -56,3 +56,13 @@ create table api.attendance (
 
 insert into api.attendance (user_name, total_hours) values ('Volunteer 1', 4);
 
+create table api.uav (
+  user_name text,
+  available text
+);
+
+insert into api.uav (user_name, available) values ('Sally', 'Monday, Friday');
+insert into api.uav (user_name, available) values ('John', 'Tuesday, Friday');
+insert into api.uav (user_name, available) values ('Baxter', 'Saturday, Friday');
+insert into api.uav (user_name, available) values ('Joe', 'Saturday, Friday');
+insert into api.uav (user_name, available) values ('Suzy', 'Monday, Thursday, Friday');
