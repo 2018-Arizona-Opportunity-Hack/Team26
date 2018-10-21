@@ -1,2 +1,3 @@
 dbConfig.js
+postgresSecret.sql
 node_modules
