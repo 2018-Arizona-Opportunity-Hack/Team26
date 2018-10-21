@@ -75,9 +75,6 @@ class OrganizationPage extends Component {
   addEventHandler (event) {
     event.preventDefault();
 
-    
-    alert('event ' + this.state.event_name + ' is on ' + new Date(this.state.event_date + ' ' + this.state.event_start_time).toString());
-
     this.setState({events: [...this.state.events, {
       start: new Date(this.state.event_date + ' ' + this.state.event_start_time),
       end: new Date(this.state.event_date + ' ' + this.state.event_end_time),
@@ -116,7 +113,7 @@ class OrganizationPage extends Component {
           <h1>Recently Signed Up:</h1>
           <p>{this.state.user_name}, {this.state.user_phone}, {this.state.user_email}</p>
         </div>)}
-      <CSVLink data={csvData}>Download All Users To CSV</CSVLink>
+        <CSVLink data={csvData}>Download All Users To CSV</CSVLink>
  
       <div className="Availablity">
         <h2>Available Volunteers</h2>
@@ -157,8 +154,8 @@ class OrganizationPage extends Component {
                   <Input type="time" name="endTime" id="eventEndTime" placeholder="End Time" value={this.state.event_end_time} onChange={this.handleEndTimeChange} />
                 </Col>
               </FormGroup>
-              <input type="submit" value="Create Event" />
-                          </Form>
+              <Button type="submit" color="primary" onSubmit={this.addEventHandler}>Sign Up</Button>
+            </Form>
           </div>
           <BigCalendar
             localizer={localizer}
