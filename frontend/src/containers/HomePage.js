@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Jumbotron, Button } from 'reactstrap';
-
+import logo_image from './logo.png';
 // import './App.scss';
 
 class HomePage extends Component {
@@ -8,7 +8,7 @@ class HomePage extends Component {
     return (
       <div className="HomeContainer">
       <Jumbotron>
-          <h1 className="display-3">Hello, world!</h1>
+          <h1 className="display-3">Voluntarius<img src={logo_image}/></h1>
           <p className="lead">blah blah blah</p>
           <hr className="my-2" />
           <p>Blah2222222</p>
